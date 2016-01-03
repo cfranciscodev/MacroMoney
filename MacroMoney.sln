@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacroMoney.Business.Entities", "MacroMoney.Business.Entities\MacroMoney.Business.Entities.csproj", "{A892DE84-6B41-44DC-906F-83BD71788432}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{AF67B753-2CD4-417D-8FBE-1DB794C7496A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F742B22A-C2DF-4D97-83B5-DD3E46EA54AE}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MacroMoney.Db", "MacroMoney.Db\MacroMoney.Db.sqlproj", "{FCF277AE-5940-42CD-B971-E7657671C6D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FE859184-901F-4F33-8D33-F83F3A34E374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common", "Core.Common\Core.Common.csproj", "{A0283B7E-A052-43B8-8E9A-9E265B9EC16B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.Contracts", "Core.Common.Contracts\Core.Common.Contracts.csproj", "{2A0B4B6C-474C-4C6E-B005-16FDFB2877DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.ServiceModel", "Core.Common.ServiceModel\Core.Common.ServiceModel.csproj", "{33111FA3-3294-4ABA-B222-304A882F7463}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access", "Data Access", "{F9876736-A64F-45C4-A0BF-4F0CCC541A81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacroMoney.Data", "MacroMoney.Data\MacroMoney.Data.csproj", "{680AC145-A9CC-4DA8-89DA-35B9B9D3B5C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacroMoney.Data.Contracts", "MacroMoney.Data.Contracts\MacroMoney.Data.Contracts.csproj", "{1A4A6377-56A2-4D3E-90C6-101D269CE9AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration Tests", "Integration Tests", "{ADE88726-838D-40CC-A969-D77C7002D8D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacroMoney.Data.IntegrationTests", "MacroMoney.Data.IntegrationTests\MacroMoney.Data.IntegrationTests.csproj", "{36685586-CF05-4BDB-ABCC-76A567B24781}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A892DE84-6B41-44DC-906F-83BD71788432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A892DE84-6B41-44DC-906F-83BD71788432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A892DE84-6B41-44DC-906F-83BD71788432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A892DE84-6B41-44DC-906F-83BD71788432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF277AE-5940-42CD-B971-E7657671C6D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF277AE-5940-42CD-B971-E7657671C6D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF277AE-5940-42CD-B971-E7657671C6D4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FCF277AE-5940-42CD-B971-E7657671C6D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF277AE-5940-42CD-B971-E7657671C6D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF277AE-5940-42CD-B971-E7657671C6D4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A0283B7E-A052-43B8-8E9A-9E265B9EC16B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0283B7E-A052-43B8-8E9A-9E265B9EC16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0283B7E-A052-43B8-8E9A-9E265B9EC16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0283B7E-A052-43B8-8E9A-9E265B9EC16B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0B4B6C-474C-4C6E-B005-16FDFB2877DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0B4B6C-474C-4C6E-B005-16FDFB2877DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0B4B6C-474C-4C6E-B005-16FDFB2877DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0B4B6C-474C-4C6E-B005-16FDFB2877DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33111FA3-3294-4ABA-B222-304A882F7463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33111FA3-3294-4ABA-B222-304A882F7463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33111FA3-3294-4ABA-B222-304A882F7463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33111FA3-3294-4ABA-B222-304A882F7463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680AC145-A9CC-4DA8-89DA-35B9B9D3B5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680AC145-A9CC-4DA8-89DA-35B9B9D3B5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680AC145-A9CC-4DA8-89DA-35B9B9D3B5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680AC145-A9CC-4DA8-89DA-35B9B9D3B5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4A6377-56A2-4D3E-90C6-101D269CE9AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4A6377-56A2-4D3E-90C6-101D269CE9AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4A6377-56A2-4D3E-90C6-101D269CE9AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4A6377-56A2-4D3E-90C6-101D269CE9AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36685586-CF05-4BDB-ABCC-76A567B24781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36685586-CF05-4BDB-ABCC-76A567B24781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36685586-CF05-4BDB-ABCC-76A567B24781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36685586-CF05-4BDB-ABCC-76A567B24781}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A892DE84-6B41-44DC-906F-83BD71788432} = {AF67B753-2CD4-417D-8FBE-1DB794C7496A}
+		{FCF277AE-5940-42CD-B971-E7657671C6D4} = {F742B22A-C2DF-4D97-83B5-DD3E46EA54AE}
+		{A0283B7E-A052-43B8-8E9A-9E265B9EC16B} = {FE859184-901F-4F33-8D33-F83F3A34E374}
+		{2A0B4B6C-474C-4C6E-B005-16FDFB2877DE} = {FE859184-901F-4F33-8D33-F83F3A34E374}
+		{33111FA3-3294-4ABA-B222-304A882F7463} = {FE859184-901F-4F33-8D33-F83F3A34E374}
+		{680AC145-A9CC-4DA8-89DA-35B9B9D3B5C5} = {F9876736-A64F-45C4-A0BF-4F0CCC541A81}
+		{1A4A6377-56A2-4D3E-90C6-101D269CE9AE} = {F9876736-A64F-45C4-A0BF-4F0CCC541A81}
+		{36685586-CF05-4BDB-ABCC-76A567B24781} = {ADE88726-838D-40CC-A969-D77C7002D8D1}
+	EndGlobalSection
+EndGlobal

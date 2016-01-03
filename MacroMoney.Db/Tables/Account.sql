@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Account]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [AccountType] NVARCHAR(100) NOT NULL, 
+    [Name] NVARCHAR(100) NOT NULL, 
+    [StartingBalance] MONEY NOT NULL, 
+    [UserId] UNIQUEIDENTIFIER NOT NULL
+)

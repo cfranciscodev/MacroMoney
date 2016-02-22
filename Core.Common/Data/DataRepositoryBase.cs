@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
-using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using Core.Common.Contracts;
 using Core.Common.Utils;

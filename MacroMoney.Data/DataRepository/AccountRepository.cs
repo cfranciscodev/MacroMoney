@@ -14,42 +14,52 @@ namespace MacroMoney.Data.DataRepository
     {
         protected override Account AddEntity(MacroMoneyContext entityContext, Account entity)
         {
+            entity.Id = Guid.NewGuid();
             entityContext.Account.Add(entity);
             return entity;
         }
 
         protected override Account UpdateEntity(MacroMoneyContext entityContext, Account entity)
         {
-            entity = (from e in entityContext.Account
-                      where e.Id == entity.Id
-                      select e).FirstOrDefault();
+            entity = entityContext.Account.FirstOrDefault(e => e.Id == entity.Id);
             return entity;
         }
 
         protected override IEnumerable<Account> GetEntities(MacroMoneyContext entityContext)
         {
-            var entities = (from e in entityContext.Account
-                            select e);
+            var entities = entityContext.Account;
             return entities;
         }
 
         protected override Account GetEntity(MacroMoneyContext entityContext, Guid id)
         {
-            var entity = (from e in entityContext.Account
-                          where e.Id == id
-                          select e).FirstOrDefault();
+            var entity = entityContext.Account.FirstOrDefault(e => e.Id == id);
             return entity;
         }
 
-        public Account GetAccountInfoById(Guid id)
+        //public Account GetAccountInfoByUserId(Guid id)
+        //{
+        //    var account = new Account();
+        //    using (var entityContext = new MacroMoneyContext())
+        //    {
+        //        account = entityContext.Account
+        //            .FirstOrDefault(a => a.Id == id);
+        //    }
+        //    return account;
+        //}
+
+        public List<Account> GetAccountsByUserId(Guid userId)
         {
-            var account = new Account();
+            var accounts = new List<Account>();
             using (var entityContext = new MacroMoneyContext())
             {
-                account = entityContext.Account
-                    .FirstOrDefault(a => a.Id == id);
+                accounts = entityContext.Account
+                    .Include(e => e.Transactions)
+                    .Include(e => e.Transactions.Select(td => td.TransactionDetails))
+                    .Where(a => a.UserId == userId).ToList();
             }
-            return account;
+            return accounts;
         }
+
     }
 }

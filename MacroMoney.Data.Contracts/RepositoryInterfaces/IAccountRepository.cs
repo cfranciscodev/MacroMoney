@@ -10,6 +10,6 @@ namespace MacroMoney.Data.Contracts.RepositoryInterfaces
 {
     public interface IAccountRepository : IDataRepository<Account>
     {
-        Account GetAccountInfoById(Guid id);
+        List<Account> GetAccountsByUserId(Guid userId);
     }
 }

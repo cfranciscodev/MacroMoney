@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,7 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountRepository_IntegrationTests.cs" />
+    <Compile Include="CategoryRepository_IntegrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestEntityMaker.cs" />
+    <Compile Include="TransactionRepository_IntegrationTests.cs" />
+    <Compile Include="UserRepository_IntegrationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core.Common.Contracts\Core.Common.Contracts.csproj">

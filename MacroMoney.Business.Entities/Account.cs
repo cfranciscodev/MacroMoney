@@ -1,67 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Serialization;
 using Core.Common.Contracts;
 
 namespace MacroMoney.Business.Entities
 {
+    [DataContract(IsReference = true)]
     public class Account : IIdentifier
     {
-        private Guid _id;
-        private string _accountType;
-        private string _name;
-        private decimal _startingBalance;
-        private Guid _userID;
         
-        public Account(Guid userId, string accountType, string name, decimal startingBalance)
-        {
-            _id = Guid.NewGuid();
-            _accountType = accountType;
-            _name = name;
-            _startingBalance = startingBalance;
-            _userID = userId;
-        }
-
         public Account()
         {
-            
+            Transactions = new List<Transaction>();
         }
-
-        public Guid Identity
+        
+        public decimal AmountBalance
         {
-            get { return Id; }
+            get
+            {
+                return StartingBalance + Transactions.Sum(tran => tran.Amount);
+            }
         }
+        
+        [DataMember]
+        public Guid Id { get; set; }
 
-        public Guid Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+        [DataMember]
+        public string AccountType { get; set; }
 
-        public string AccountType
-        {
-            get { return _accountType; }
-            set { _accountType = value; }
-        }
+        [DataMember]
+        public string Name { get; set; }
 
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
+        [DataMember]
+        public decimal StartingBalance { get; set; }
 
-        public decimal StartingBalance
-        {
-            get { return _startingBalance; }
-            set { _startingBalance = value; }
-        }
+        [DataMember]
+        public Guid UserId { get; set; }
 
-        public Guid UserId
-        {
-            get { return _userID; }
-            set { _userID = value; }
-        }
+        [DataMember]
+        public List<Transaction> Transactions { get; set; }
+
+        public Guid Identity => Id;
+
     }
 }

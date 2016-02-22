@@ -4,5 +4,6 @@
     [AccountType] NVARCHAR(100) NOT NULL, 
     [Name] NVARCHAR(100) NOT NULL, 
     [StartingBalance] MONEY NOT NULL, 
-    [UserId] UNIQUEIDENTIFIER NOT NULL
+    [UserId] UNIQUEIDENTIFIER NOT NULL, 
+    CONSTRAINT [FK_Account_User] FOREIGN KEY ([UserId]) REFERENCES [User]([Id])
 )

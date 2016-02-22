@@ -61,5 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Account.sql" />
+    <Build Include="Tables\Transaction.sql" />
+    <Build Include="Tables\TransactionDetail.sql" />
+    <Build Include="Tables\Category.sql" />
+    <Build Include="Tables\User.sql" />
   </ItemGroup>
 </Project>
